@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!-- 边距尺寸 -->
+    <dimen name="main_margin_top">45dp</dimen>
+    <dimen name="main_table">60dp</dimen>
+    <dimen name="bar_tool_btn_width">56dp</dimen>
+</resources>

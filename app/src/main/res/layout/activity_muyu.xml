@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/teal_700">
+    <ImageView
+        android:id="@+id/iv"
+        android:visibility="invisible"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/back"/>
+
+    <!-- 木鱼动画 -->
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieWoodenFish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:lottie_fileName="wooden_fish.json"
+        app:lottie_autoPlay="false"
+        app:lottie_loop="false" />
+
+    <!-- 功德计数 -->
+    <TextView
+        android:id="@+id/tvCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lottieWoodenFish"
+        android:enabled="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text="功德: 0"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:fontFamily="sans-serif-medium" />
+
+    <!-- 浮动功德文字容器 -->
+    <FrameLayout
+        android:id="@+id/containerMeritTexts"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false" />
+</RelativeLayout>
