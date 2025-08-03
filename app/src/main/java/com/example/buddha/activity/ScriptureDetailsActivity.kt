@@ -8,6 +8,7 @@ import android.speech.tts.UtteranceProgressListener
 import com.example.buddha.databinding.ActivityScriptureDetailBinding
 import com.example.buddha.util.Constant
 import com.example.buddha.util.SharedPreferencesHelper
+import com.example.buddha.util.TextUtil
 import com.example.buddha.util.ToastUtil
 import java.util.Locale
 
@@ -124,7 +125,7 @@ class ScriptureDetailsActivity: BaseActivity(), TextToSpeech.OnInitListener {
                     params.putString(TextToSpeech.Engine.KEY_PARAM_UTTERANCE_ID, "uniqueId")
                     tts.speak(ttsText.drop(readSize.toInt()), TextToSpeech.QUEUE_FLUSH, params, "uniqueId")
                 }else{
-                        ToastUtil.showShort(this,"已朗读完成")
+                        ToastUtil.showShort(this,"朗读失败请稍后重试，请稍后重试")
                 }
             }else{
                 // 第一次开始朗读
@@ -215,6 +216,10 @@ class ScriptureDetailsActivity: BaseActivity(), TextToSpeech.OnInitListener {
 
     override fun onResume() {
         mActivityScriptureDetailBinding.readTextview.text = "朗读"
+        //获取当前显示的文字
+        mActivityScriptureDetailBinding.scriptureTextView.post {
+            ttsText = TextUtil.getWindowText(mActivityScriptureDetailBinding.scriptureTextView,mActivityScriptureDetailBinding.scriptureScrollView)
+        }
         super.onResume()
     }
 

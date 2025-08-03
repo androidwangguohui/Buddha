@@ -2,4 +2,16 @@
 <resources>
 
     <style name="Theme.Buddha" parent="Theme.MaterialComponents.Light.NoActionBar" />
+
+    <style name="AppTheme.ImmersiveStatusBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- 隐藏ActionBar（如果不需要） -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <!-- 关键：状态栏透明 -->
+        <item name="android:statusBarColor">@color/transparent_black</item>
+
+        <!-- 允许窗口内容延伸到状态栏区域 -->
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+    </style>
 </resources>

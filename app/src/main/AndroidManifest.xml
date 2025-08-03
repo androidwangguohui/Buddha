@@ -11,14 +11,13 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Buddha"
+        android:theme="@style/AppTheme.ImmersiveStatusBar"
         android:requestLegacyExternalStorage="true"
         tools:targetApi="31">
         <activity
             android:name=".activity.MainActivity"
             android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.Buddha">
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -29,8 +28,6 @@
         <activity android:name=".activity.ScriptureDetailsActivity" />
         <activity android:name=".activity.LoginActivity" />
         <activity android:name=".activity.MuYuActivity" />
-        <activity android:name=".activity.MuYuActivity2" />
-        <activity android:name=".activity.MuYuActivity3" />
     </application>
 
     <!--连接网络权限，用于执行云端语音能力 -->

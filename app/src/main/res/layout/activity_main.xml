@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_marginTop="@dimen/main_margin_top"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -18,7 +17,6 @@
         android:layout_height="@dimen/main_table"
         app:tabIndicatorGravity="top"
         app:tabTextColor="@color/black"
-        android:layout_marginBottom="50dp"
         app:tabSelectedTextColor="@color/purple_700"
         app:tabIndicatorColor="@color/purple_700"/>
 </LinearLayout>
